@@ -1,0 +1,58 @@
+@import '../.../../../../../style/contants.scss';
+
+.container {
+  display: flex;
+  position: fixed;
+  bottom: 120px;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 120px;
+  width: 690px;
+  transition: .5s all;
+
+  @media (max-width: 500px) {
+    gap: 50px;
+    width: 390px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 160px;
+    font-size: 23px;
+    font-weight: 700;
+    background: $dark-bg;
+    border: none;
+    color: #fff;
+    background: linear-gradient(to bottom right, #90179d4a, #45044f79);
+    
+    box-shadow: -2px 2px 1px 2px #83069c76;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all .2s;
+
+    @media (max-width: 390px) {
+      width: 150px;
+      font-size: 20px
+    }
+
+    &:hover {
+      box-shadow: -2px 2px 3px 2px #a829b9d2;
+      text-shadow: 2px 2px #bc22d0eb;
+      transform: scale(1.05);
+    }
+
+    &.active {
+      box-shadow: -2px 2px 3px 2px #a829b9d2;
+      text-shadow: 2px 2px #bc22d0eb;
+      transform: scale(1.05);
+    }
+  }
+
+  .icon {
+    transform: translateY(3px);
+  }
+}

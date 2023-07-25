@@ -1,0 +1,112 @@
+@import '../../../../style/contants.scss';
+
+.container {
+  position: absolute;
+  background: $dark-bg;
+  width: 120px;
+  height: 90px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+
+  .name-course {
+    font-size: 16px;
+  }
+
+  &.left {
+    left: -70px;
+
+    .date {
+      top: -4px;
+      left: 0;
+    }
+  }
+
+  &.right {
+    right: -70px;
+
+    .date {
+      top: -4px;
+      right: 0;
+    }
+  }
+
+  .title {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+  }
+
+  .date {
+    position: absolute;
+    color: #fff;
+    
+    background: $dark-bg;
+    z-index: 5;
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #9900ff;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border-radius: 30px;
+  }
+
+  &.javarush {
+    padding-top: 15px;
+    box-shadow: 1px 1px 2px 1px #b100fd32;
+    text-shadow: 2px 2px 1px #ba780dfa;
+  }
+  &.javarush::after {
+    background: linear-gradient(to bottom right, #fdad0090, #b100fd4b);
+  }
+
+  &.rss-pre {
+    padding-top: 12px;
+    box-shadow: 1px 1px 2px 1px #fddf0032;
+    text-shadow: 2px 2px 1px #acbd0bfa;
+  }
+  &.rss-pre::after {
+    background: linear-gradient(to top left, #fde40090, #b100fd4b);
+  }
+
+  &.rss-front {
+    box-shadow: 1px 1px 2px 1px #3f078832;
+    text-shadow: 2px 2px 1px #7012bdfa;
+  }
+  &.rss-front::after {
+    background: linear-gradient(to bottom right, #540de390, #4c10665b);
+  }
+
+  &.rss-react {
+    padding-top: 14px;
+    box-shadow: 1px 1px 2px 1px #099de732;
+    text-shadow: 2px 2px 1px #0a87cff2;
+  }
+  &.rss-react::after {
+    background: linear-gradient(to top left, #0eadc690, #2f037b5b);
+  }
+
+  &.rss-node {
+    padding-top: 15px;
+    box-shadow: 1px 1px 2px 1px #3f078832;
+    text-shadow: 2px 2px 1px #0da449fa;
+  }
+  &.rss-node::after {
+    background: linear-gradient(to bottom right, #0eea339e, #4c026755);
+  }
+}

@@ -1,0 +1,276 @@
+@import '../../../style/contants.scss';
+
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 20px;
+  padding-top: 60px;
+  justify-content: center;
+  scroll-snap-align: center;
+
+  @media (max-width: 500px) {
+    padding-top: 0px;
+  }
+
+  @media (max-height: 700px) {
+    padding-top: 45px;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    @media (max-width: 500px) {
+      padding-top: 70px;
+    }
+
+    @media (max-width: 390px) {
+      padding-top: 0px;
+    }
+
+    .title {
+      position: absolute;
+      font-size: 40px;
+      top: -40px;
+      border-radius: 40px;
+      background: $dark-bg;
+      padding: 5px 15px;
+      color: #fff;
+      text-shadow: -2px 2px 1px #a208cd;
+
+      @media (max-width: 500px) {
+        font-size: 26px;
+        top: -25px;
+      }
+    }
+
+    .days {
+      position: absolute;
+      right: -5px;
+      bottom: -5px;
+      color: #fff;
+      text-shadow: -2px 3px 1px #a208cd;
+      background: $dark-bg;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      font-size: 30px;
+      padding: 7px 20px;
+
+      @media (max-width: 500px) {
+        font-size: 20px;
+      }
+    }
+
+    .container-img {
+      position: relative;
+      width: 100%;
+      box-shadow: -2px 2px 2px 1px #a208cdb2;
+      border: 1px solid #a208cdb2;
+      border-radius: 20px;
+      max-width: 700px;
+      display: flex;
+      justify-content: center;
+
+      @media (max-width: 500px) {
+        max-width: 250px;
+      }
+
+      .img-mobile {
+        display: none;
+
+        @media (max-width: 500px) {
+          display: block;
+        }
+      }
+
+      img {
+        width: 100%;
+        border-radius: 20px;
+
+        @media (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+
+    .tags {
+      margin-top: 10px;
+      max-width: 700px;
+      padding: 0px 20px 7px;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 20px;
+      border: none;
+      column-gap: 10px;
+      row-gap: 7px;
+
+      box-shadow: -2px 2px 2px 1px #a208cdb2;
+      
+      legend {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        text-shadow: -2px 1px 0px #a208cd;
+      }
+    }
+  }
+}
+
+.tag {
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 5px;
+
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
+
+  @media (max-height: 700px) {
+    font-size: 10px;
+    padding: 3px 3px;
+  }
+
+  &.typescript {
+    background: linear-gradient(to bottom right, #180d77a2, #1f2eba70);
+    box-shadow: -1px 1px 1px 1px #1202a8bb;
+    border: 0.5px solid #1202a8bb;
+  }
+
+  &.scss {
+    background: linear-gradient(to bottom right, #c21ad1a2, #ad1fba70);
+    box-shadow: -1px 1px 1px 1px #a302a8bb;
+    border: 0.5px solid #a302a8bb;
+  }
+
+  &.react {
+    background: linear-gradient(to bottom right, #2b66d4c5, #0f77e670);
+    box-shadow: -1px 1px 1px 1px #1a92e9bb;
+    border: 0.5px solid #1774b6bb;
+  }
+
+  &.webpack {
+    background: linear-gradient(to bottom right, #5a4ec6a2, #1129f970);
+    box-shadow: -1px 1px 1px 1px #4737d5bb;
+    border: 0.5px solid #4737d5bb;
+  }
+
+  &.framer-motion {
+    background: linear-gradient(to bottom right, #2c16f1a2, #2c38a470);
+    box-shadow: -1px 1px 1px 1px #2c38a4c8;
+    border: 0.5px solid #2c38a470;
+  }
+
+  &.react-hook-form {
+    background: linear-gradient(to bottom right, #ea16f1a2, #ba12ba70);
+    box-shadow: -1px 1px 1px 1px #ba12ba70;
+    border: 0.5px solid #ba12ba70;
+  }
+
+  &.react-hook-form {
+    background: linear-gradient(to bottom right, #ea16f1a2, #ba12ba70);
+    box-shadow: -1px 1px 1px 1px #ba12ba70;
+    border: 0.5px solid #ba12ba70;
+  }
+
+  &.lottie-react {
+    background: linear-gradient(to bottom right, #16f1e6a2, #123fba70);
+    box-shadow: -1px 1px 1px 1px #123fba70;
+    border: 0.5px solid #123fba70;
+  }
+
+  &.react-router-dom {
+    background: linear-gradient(to bottom right, #d0d9d9a2, #d6d9df70);
+    box-shadow: -1px 1px 1px 1px #8d8f9270;
+    border: 0.5px solid #6c7575a2;
+  }
+
+  &.axios {
+    background: linear-gradient(to bottom right, #cfdd0edf, #b4db0770);
+    box-shadow: -1px 1px 1px 1px #90991091;
+    border: 0.5px solid #90991091;
+  }
+
+  &.node {
+    background: linear-gradient(to bottom right, #2ddd0edf, #25970970);
+    box-shadow: -1px 1px 1px 1px #12991091;
+    border: 0.5px solid #1299105a;
+  }
+
+  &.express {
+    background: linear-gradient(to bottom right, #dadd0edf, #97680970);
+    box-shadow: -1px 1px 1px 1px #90991091;
+    border: 0.5px solid #90991091;
+  }
+
+  &.telegram-api-bot {
+    background: linear-gradient(to bottom right, #0e61dddf, #21099770);
+    box-shadow: -1px 1px 1px 1px #0e61dd9b;
+    border: 0.5px solid #0e61ddaa;
+  }
+
+  &.chartjs {
+    background: linear-gradient(to bottom right, #e78309df, #d6e01170);
+    box-shadow: -1px 1px 1px 1px #ddb00e88;
+    border: 0.5px solid #ddb00e7f;
+  }
+
+  &.mongodb {
+    background: linear-gradient(to bottom right, #23e709df, #05ac2670);
+    box-shadow: -1px 1px 1px 1px #05ac2670;
+    border: 0.5px solid #05ac2670;
+  }
+
+  &.redux {
+    background: linear-gradient(to bottom right, #9209e7df, #b708ce70);
+    box-shadow: -1px 1px 1px 1px #9209e76a;
+    border: 0.5px solid #9209e768;
+  }
+
+  &.redux-toolkit-query {
+    background: linear-gradient(to bottom right, #d809e7df, #8505ac70);
+    box-shadow: -1px 1px 1px 1px #d809e768;
+    border: 0.5px solid #d809e768;
+  }
+
+  &.react-dnd {
+    background: linear-gradient(to bottom right, #0923e7df, #144ca770);
+    box-shadow: -1px 1px 1px 1px #144ca772;
+    border: 0.5px solid #144ca760;
+  }
+
+  &.i18next {
+    background: linear-gradient(to bottom right, #e70987df, #ac055e70);
+    box-shadow: -1px 1px 1px 1px #e709875b;
+    border: 0.5px solid #e7098751;
+  }
+
+  &.redux-toolkit-query {
+    background: linear-gradient(to bottom right, #d809e7df, #8505ac70);
+    box-shadow: -1px 1px 1px 1px #d809e768;
+    border: 0.5px solid #d809e768;
+  }
+
+  &.mui {
+    background: linear-gradient(to bottom right, #2e09e7df, #14047e70);
+    box-shadow: -1px 1px 1px 1px #1933a797;
+    border: 0.5px solid #1831a370;
+  }
+
+  &.nestjs {
+    background: linear-gradient(to bottom right, #e70909df, #81060670);
+    box-shadow: -1px 1px 1px 1px #e709096a;
+    border: 0.5px solid #e7090964;
+  }
+
+  &.postgresql {
+    background: linear-gradient(to bottom right, #4409e7df, #2605ac70);
+    box-shadow: -1px 1px 1px 1px #1c09e768;
+    border: 0.5px solid #4409e756;
+  }
+}
